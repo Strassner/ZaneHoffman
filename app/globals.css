@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* white: primary */
+  --color-paper: #ffffff;
+
+  /* light blue: secondary */
+  --color-sky-50: #f3f8fc;
+  --color-sky-100: #e6f0f9;
+  --color-sky-200: #d3e5f4;
+  --color-sky-300: #b7d5ec;
+  --color-sky-400: #8fbbdf;
+
+  /* grey: tertiary */
+  --color-mist-50: #f7f8f9;
+  --color-mist-100: #eef0f2;
+  --color-mist-200: #dde1e5;
+  --color-mist-300: #c4cacf;
+  --color-mist-500: #6b7380;
+
+  /* black: text + supplemental */
+  --color-ink: #0b0d10;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  ::selection {
+    background: var(--color-sky-300);
+  }
+}
+
+/* Faint measurement grid, used behind the application section. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(11 13 16 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(11 13 16 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
