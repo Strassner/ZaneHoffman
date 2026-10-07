@@ -3,36 +3,84 @@ export const APPLICATION_URL = "#";
 
 export const COACH_NAME = "Zane Hoffman";
 
-export type Testimonial = {
+// All client names, numbers, and quotes below are placeholders.
+
+export const marker = {
+  headline: "Michael reversed his type 2 diabetes.",
+  beforeLabel: "Before",
+  before: "7.0",
+  afterLabel: "One month later",
+  after: "6.3",
+  body: "A1c at or above 6.5 is the type 2 range. 5.7 and above is pre-diabetic. Michael started at 350 pounds on two medications, and after one month of work focused on insulin sensitivity his A1c sat below the type 2 threshold.",
+  note: "This is not medical advice, please consult your doctor. Medical outcomes cannot be guaranteed.",
+};
+
+export type CompactResult = { name: string; descriptor: string };
+
+export const compactResults: CompactResult[] = [
+  { name: "Ethan R.", descriptor: "Truck driver · down 80 lbs" },
+  { name: "Tim K.", descriptor: "Engineer · down 40 lbs" },
+  { name: "Matt S.", descriptor: "53 · sales exec · down 20 lbs" },
+  { name: "Sarah T.", descriptor: "Teacher · down 27 lbs" },
+];
+
+export type FeaturedResult = {
   name: string;
+  descriptor: string;
   lost: string;
   duration: string;
   summary: string;
+  quote: string;
 };
 
-export const testimonials: Testimonial[] = [
+export const featuredResults: FeaturedResult[] = [
   {
-    name: "Michael R.",
-    lost: "42 lbs",
-    duration: "16 weeks",
+    name: "Daniel M.",
+    descriptor: "Project manager",
+    lost: "45 lbs",
+    duration: "5 months",
     summary:
-      "Started at 238 lbs with no training routine. Built a consistent lifting schedule and a simple nutrition plan, and dropped to 196 lbs while gaining visible strength.",
+      "Started at 238 lbs with no training routine. A consistent lifting schedule and a simple nutrition plan took him to 193 lbs with visible strength gains.",
+    quote:
+      "Other coaches felt like I got handed off to a stranger. Here I actually get my coach, and the communication is what makes it work.",
   },
   {
-    name: "Daniel K.",
-    lost: "31 lbs",
-    duration: "12 weeks",
+    name: "Chris L.",
+    descriptor: "Corporate consultant",
+    lost: "85 lbs",
+    duration: "10 months",
     summary:
-      "A desk-job schedule and late-night eating were the main obstacles. Structured meals and three weekly sessions took him from 214 lbs to 183 lbs.",
-  },
-  {
-    name: "Sarah T.",
-    lost: "27 lbs",
-    duration: "14 weeks",
-    summary:
-      "Came in with a history of crash diets. A sustainable calorie target and progressive training brought her from 181 lbs to 154 lbs, and the results have held.",
+      "Travel-heavy schedule and a history of crash diets. A sustainable calorie target and progressive training brought him from 295 lbs to 210 lbs, and it has held.",
+    quote:
+      "People are noticing. I get compliments from family, coworkers, friends. I can't recall the last time I felt this confident.",
   },
 ];
+
+export type Quote = { quote: string; name: string; descriptor: string };
+
+export const quotes: Quote[] = [
+  {
+    quote:
+      "Ten months ago I was 380. Now I'm under 300 lbs for the first time in 26 years and I have energy like I'm in my 30s again.",
+    name: "James D.",
+    descriptor: "Father of two, 47",
+  },
+  {
+    quote:
+      "First time in years the scale is going the right way. My nutrition is dialed in and the weight is moving.",
+    name: "Sam W.",
+    descriptor: "Father, entrepreneur",
+  },
+  {
+    quote:
+      "You get down to the details. That's how I know you know what you're doing.",
+    name: "Dr. Alex P.",
+    descriptor: "Down 14 lbs in 7 weeks",
+  },
+];
+
+export const disclaimer =
+  "These are individual results and are not what everyone should expect. Your own results depend on your starting point, your health history, and how consistently you follow the plan.";
 
 export const story = [
   "I spent my early twenties overweight, inconsistent, and convinced that results were for people with more discipline than me. Every plan I tried was either too extreme to last or too vague to follow.",
