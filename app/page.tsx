@@ -1,6 +1,5 @@
 import { ApplyButton } from "@/components/ApplyButton";
 import { Header } from "@/components/Header";
-import { MarkerPanel } from "@/components/MarkerPanel";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { CompactCard, FeaturedCard, QuoteCard } from "@/components/ResultCards";
 import {
@@ -37,8 +36,6 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <MarkerPanel />
-
               <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
                 {compactResults.map((r) => (
                   <CompactCard key={r.name} {...r} />
@@ -61,7 +58,7 @@ export default function Home() {
         </section>
 
         {/* My story */}
-        <section id="story" className="border-b border-mist-200 bg-mist-50 py-24">
+        <section id="story" className="bg-mist-50 py-24">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-[5fr_6fr] md:gap-16">
             <PhotoPlaceholder
               label={`${COACH_NAME}, coach`}
@@ -80,15 +77,6 @@ export default function Home() {
               <p className="mt-8 border-t border-mist-200 pt-6 text-sm font-semibold">{COACH_NAME}</p>
             </div>
           </div>
-        </section>
-
-        {/* Closing application */}
-        <section className="bg-grid flex flex-col items-center gap-4 bg-sky-50 px-6 py-24 text-center">
-          <h2 className="mb-4 max-w-xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-            This only gets harder the longer you wait. Start today.
-          </h2>
-          <ApplyButton />
-          <p className="font-mono text-xs text-mist-500">Takes 30 seconds</p>
         </section>
 
         <footer className="border-t border-mist-200 bg-paper px-6 py-8 text-center text-sm text-mist-500">

@@ -5,16 +5,6 @@ export const COACH_NAME = "Zane Hoffman";
 
 // All client names, numbers, and quotes below are placeholders.
 
-export const marker = {
-  headline: "Michael reversed his type 2 diabetes.",
-  beforeLabel: "Before",
-  before: "7.0",
-  afterLabel: "One month later",
-  after: "6.3",
-  body: "A1c at or above 6.5 is the type 2 range. 5.7 and above is pre-diabetic. Michael started at 350 pounds on two medications, and after one month of work focused on insulin sensitivity his A1c sat below the type 2 threshold.",
-  note: "This is not medical advice, please consult your doctor. Medical outcomes cannot be guaranteed.",
-};
-
 export type CompactResult = { name: string; descriptor: string };
 
 export const compactResults: CompactResult[] = [
