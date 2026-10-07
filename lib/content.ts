@@ -1,9 +1,13 @@
+import type { StaticImageData } from "next/image";
+import afterPhoto from "@/assets/testimonial-after.jpg";
+import beforePhoto from "@/assets/testimonial-before.jpg";
+
 // Dummy destination until the real application form exists.
 export const APPLICATION_URL = "#";
 
 export const COACH_NAME = "Zane Hoffman";
 
-// All client names, numbers, and quotes below are placeholders.
+// The first featured result is a real client. Everything else below is a placeholder.
 
 export type CompactResult = { name: string; descriptor: string };
 
@@ -18,12 +22,30 @@ export type FeaturedResult = {
   name: string;
   descriptor: string;
   lost: string;
-  duration: string;
-  summary: string;
-  quote: string;
+  duration?: string;
+  summary?: string;
+  /** One entry per paragraph. */
+  quote: string[];
+  images?: { before: StaticImageData; after: StaticImageData };
 };
 
 export const featuredResults: FeaturedResult[] = [
+  {
+    // TODO: replace with the client's name (and add duration if known).
+    name: "Anonymous client",
+    descriptor: "After bariatric surgery and a revision",
+    lost: "150 lbs",
+    images: { before: beforePhoto, after: afterPhoto },
+    quote: [
+      "After bariatric surgery and a revision, I had already lost a significant amount of weight—but eventually, my progress completely stalled. I was lifting weights, prioritizing protein, going to the gym, and doing everything I thought I was supposed to do, but my body just seemed stuck.",
+      "That’s when I decided to work with Zane.",
+      "What I appreciate most about Zane is that he doesn’t give you a one-size-fits-all plan. He took the time to understand me, my goals, and what I was trying to accomplish. He helped guide my nutrition and training, kept me accountable, checked in consistently, and made adjustments along the way based on how I was responding.",
+      "Since I started working with Zane, I’ve lost 150 pounds—something I honestly never thought I would accomplish.",
+      "For the first time in my life, the constant food noise has quieted down. I’m not constantly thinking about food or craving sweets, and I finally feel like I’m in control. With Zane’s guidance and support, I’ve been able to continue making progress when I thought I had reached my limit.",
+      "My energy has improved. My confidence has improved. And most importantly, I feel like my health is in the best place it has been in years.",
+      "I could have given up when I hit those plateaus, but I didn’t—and I’m so thankful I decided to work with Zane.",
+    ],
+  },
   {
     name: "Daniel M.",
     descriptor: "Project manager",
@@ -31,8 +53,9 @@ export const featuredResults: FeaturedResult[] = [
     duration: "5 months",
     summary:
       "Started at 238 lbs with no training routine. A consistent lifting schedule and a simple nutrition plan took him to 193 lbs with visible strength gains.",
-    quote:
+    quote: [
       "Other coaches felt like I got handed off to a stranger. Here I actually get my coach, and the communication is what makes it work.",
+    ],
   },
   {
     name: "Chris L.",
@@ -41,8 +64,9 @@ export const featuredResults: FeaturedResult[] = [
     duration: "10 months",
     summary:
       "Travel-heavy schedule and a history of crash diets. A sustainable calorie target and progressive training brought him from 295 lbs to 210 lbs, and it has held.",
-    quote:
+    quote: [
       "People are noticing. I get compliments from family, coworkers, friends. I can't recall the last time I felt this confident.",
+    ],
   },
 ];
 

@@ -20,13 +20,19 @@ export function FeaturedCard({
   duration,
   summary,
   quote,
+  images,
   reverse = false,
 }: FeaturedResult & { reverse?: boolean }) {
   return (
-    <article className="grid border border-mist-200 bg-paper md:grid-cols-2">
+    <article className="grid border border-mist-200 bg-paper lg:grid-cols-2">
       <BeforeAfter
         name={name}
-        className={`aspect-[4/3] md:aspect-auto md:min-h-[26rem] ${reverse ? "md:order-2" : ""}`}
+        images={images}
+        className={`${
+          images
+            ? "aspect-[1046/973] lg:sticky lg:top-20 lg:self-start"
+            : "aspect-[4/3] lg:aspect-auto lg:min-h-[26rem]"
+        } ${reverse ? "lg:order-2" : ""}`}
       />
       <div className="flex flex-col justify-center gap-6 p-6 sm:p-10">
         <div>
@@ -35,11 +41,17 @@ export function FeaturedCard({
         </div>
         <div className="flex items-baseline gap-3 border-y border-mist-200 py-4">
           <span className="font-display text-4xl font-semibold tracking-tight">−{lost}</span>
-          <span className="font-mono text-sm text-mist-500">in {duration}</span>
+          {duration && <span className="font-mono text-sm text-mist-500">in {duration}</span>}
         </div>
-        <p className="text-[15px] leading-relaxed text-ink/80">{summary}</p>
-        <blockquote className="border-l-2 border-sky-400 pl-4 text-[17px] leading-relaxed">
-          “{quote}”
+        {summary && <p className="text-[15px] leading-relaxed text-ink/80">{summary}</p>}
+        <blockquote className="space-y-4 border-l-2 border-sky-400 pl-4 text-[17px] leading-relaxed">
+          {quote.map((p, i) => (
+            <p key={i}>
+              {i === 0 && "“"}
+              {p}
+              {i === quote.length - 1 && "”"}
+            </p>
+          ))}
         </blockquote>
       </div>
     </article>
