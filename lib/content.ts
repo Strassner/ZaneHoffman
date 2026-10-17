@@ -1,6 +1,8 @@
 import type { StaticImageData } from "next/image";
 import afterPhoto from "@/assets/testimonial-after.jpg";
 import beforePhoto from "@/assets/testimonial-before.jpg";
+import prepAfter from "@/assets/prep-after.jpg";
+import prepBefore from "@/assets/prep-before.jpg";
 import mikeAfter from "@/assets/mike-after.jpg";
 import mikeBefore from "@/assets/mike-before.jpg";
 
@@ -23,7 +25,10 @@ export const compactResults: CompactResult[] = [
 export type FeaturedResult = {
   name: string;
   descriptor: string;
-  lost: string;
+  /** Pounds lost, shown as "−{lost}". Ignored when `stat` is set. */
+  lost?: string;
+  /** Free-form headline stat, e.g. for results that aren't weight loss. */
+  stat?: string;
   duration?: string;
   summary?: string;
   /** One entry per paragraph. */
@@ -60,6 +65,17 @@ export const featuredResults: FeaturedResult[] = [
       "What I appreciate most is that Zane doesn’t take a one-size-fits-all approach. He understands that everyone’s journey is different and works with you to develop a plan that fits your goals and lifestyle.",
       "Losing 116 pounds hasn’t happened overnight, and it certainly hasn’t always been easy. But having someone knowledgeable, supportive, and genuinely invested in your success makes a tremendous difference.",
       "If you’re serious about improving your health, losing weight, or getting into better shape, I highly recommend Zane. The results speak for themselves, and I’m grateful for his guidance throughout this journey!",
+    ],
+  },
+  {
+    // TODO: replace with the client's name.
+    name: "Anonymous client",
+    descriptor: "Natural bodybuilder · OCB Natural Pro Card",
+    stat: "Under 10% body fat",
+    summary: "Contest prep that ended with a Natural Pro Card win.",
+    images: { before: prepBefore, after: prepAfter },
+    quote: [
+      "Working with Zane for my prep was an absolute game changer. I came into this season wanting to bring an undeniable package, and Zane delivered a blueprint that got me leaner and sharper than I’ve ever been. Getting below 10 percent body fat is one thing but staying full and maintaining most of my muscle mass I couldn’t have done alone. On top of the elite conditioning, his guidance through peak week and show day culminated in winning my Natural Pro Card. If you’re looking for a coach who understands the science of bodybuilding and actually knows how to peak a physique for the stage, look no further than Zane.",
     ],
   },
   {

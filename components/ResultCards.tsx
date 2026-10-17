@@ -17,6 +17,7 @@ export function FeaturedCard({
   name,
   descriptor,
   lost,
+  stat,
   duration,
   summary,
   quote,
@@ -40,7 +41,9 @@ export function FeaturedCard({
           <p className="mt-1 font-mono text-xs text-mist-500">{descriptor}</p>
         </div>
         <div className="flex items-baseline gap-3 border-y border-mist-200 py-4">
-          <span className="font-display text-4xl font-semibold tracking-tight">−{lost}</span>
+          <span className="font-display text-4xl font-semibold tracking-tight">
+            {stat ?? `−${lost}`}
+          </span>
           {duration && <span className="font-mono text-sm text-mist-500">in {duration}</span>}
         </div>
         {summary && <p className="text-[15px] leading-relaxed text-ink/80">{summary}</p>}

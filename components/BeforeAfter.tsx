@@ -19,7 +19,12 @@ export function BeforeAfter({ name, images, className = "" }: Props) {
       className={`grid grid-cols-2 gap-px bg-mist-200 ${className}`}
       style={
         images
-          ? { aspectRatio: (images.before.width + images.after.width) / images.before.height }
+          ? {
+              // Size each column to its photo's own ratio so nothing is cropped or letterboxed.
+              gridTemplateColumns: `${images.before.width / images.before.height}fr ${images.after.width / images.after.height}fr`,
+              aspectRatio:
+                images.before.width / images.before.height + images.after.width / images.after.height,
+            }
           : undefined
       }
     >
