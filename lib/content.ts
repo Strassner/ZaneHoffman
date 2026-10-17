@@ -79,6 +79,20 @@ export const featuredResults: FeaturedResult[] = [
     ],
   },
   {
+    // TODO: replace with the client's name and add before/after photos (`images`).
+    name: "Anonymous client",
+    descriptor: "Started October 1, 2025",
+    lost: "110 lbs",
+    summary: "Started at 320 lbs on October 1, 2025. Now 210 lbs.",
+    quote: [
+      "When I started working with Zane on October 1, 2025, I weighed 320 pounds. Today, I’m down to 210 pounds—a total of 110 pounds lost.",
+      "I knew I needed to make some major changes in my life, but I honestly didn’t know where to start. Zane gave me the structure, guidance, and accountability I needed to completely turn my health around.",
+      "What sets Zane apart is how invested he is in your success. He doesn’t just give you a plan and send you on your way. He genuinely cares about your progress, keeps you accountable, and makes sure you have the tools to succeed.",
+      "Throughout this journey, I’ve developed an incredible amount of trust in his knowledge and approach. His guidance has been invaluable, and I couldn’t be happier with the results. I even trust Zane’s guidance more than what I’ve received from doctors in the past because he takes the time to understand my goals, listens to my concerns, and provides practical support that I can actually follow.",
+      "Losing 110 pounds has completely changed my life, and I couldn’t have done it without Zane’s support. I would recommend him to anyone who is serious about losing weight, improving their health, and making a lasting lifestyle change.",
+    ],
+  },
+  {
     name: "Daniel M.",
     descriptor: "Project manager",
     lost: "45 lbs",

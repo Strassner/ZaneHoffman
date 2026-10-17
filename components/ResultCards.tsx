@@ -32,6 +32,8 @@ export function FeaturedCard({
         className={`${
           images
             ? "lg:sticky lg:top-20 lg:self-start"
+            : quote.length > 1
+            ? "aspect-[3/2] lg:sticky lg:top-20 lg:self-start"
             : "aspect-[4/3] lg:aspect-auto lg:min-h-[26rem]"
         } ${reverse ? "lg:order-2" : ""}`}
       />
