@@ -1,6 +1,8 @@
 import type { StaticImageData } from "next/image";
 import afterPhoto from "@/assets/testimonial-after.jpg";
 import beforePhoto from "@/assets/testimonial-before.jpg";
+import mikeAfter from "@/assets/mike-after.jpg";
+import mikeBefore from "@/assets/mike-before.jpg";
 
 // Dummy destination until the real application form exists.
 export const APPLICATION_URL = "#";
@@ -44,6 +46,20 @@ export const featuredResults: FeaturedResult[] = [
       "For the first time in my life, the constant food noise has quieted down. I’m not constantly thinking about food or craving sweets, and I finally feel like I’m in control. With Zane’s guidance and support, I’ve been able to continue making progress when I thought I had reached my limit.",
       "My energy has improved. My confidence has improved. And most importantly, I feel like my health is in the best place it has been in years.",
       "I could have given up when I hit those plateaus, but I didn’t—and I’m so thankful I decided to work with Zane.",
+    ],
+  },
+  {
+    name: "Mike O'Donnell",
+    descriptor: "Doctoral candidate · MBA, SADR",
+    lost: "116 lbs",
+    summary: "Started at 320 lbs and is now 204 lbs.",
+    images: { before: mikeBefore, after: mikeAfter },
+    quote: [
+      "I can’t say enough good things about Zane and the impact he’s had on my health and fitness journey. When I started, I weighed 320 pounds. Today, I’m down to 204 pounds — a total loss of 116 pounds!",
+      "Zane has been instrumental in helping me get here. From developing effective workouts to providing practical nutrition guidance, with regular touch bases to help keep me on track and focused.",
+      "What I appreciate most is that Zane doesn’t take a one-size-fits-all approach. He understands that everyone’s journey is different and works with you to develop a plan that fits your goals and lifestyle.",
+      "Losing 116 pounds hasn’t happened overnight, and it certainly hasn’t always been easy. But having someone knowledgeable, supportive, and genuinely invested in your success makes a tremendous difference.",
+      "If you’re serious about improving your health, losing weight, or getting into better shape, I highly recommend Zane. The results speak for themselves, and I’m grateful for his guidance throughout this journey!",
     ],
   },
   {

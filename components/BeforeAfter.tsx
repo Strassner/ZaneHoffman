@@ -15,7 +15,14 @@ const afterChip =
 /** Side-by-side before/after pair. Falls back to placeholders when no photos are given. */
 export function BeforeAfter({ name, images, className = "" }: Props) {
   return (
-    <div className={`grid grid-cols-2 gap-px bg-mist-200 ${className}`}>
+    <div
+      className={`grid grid-cols-2 gap-px bg-mist-200 ${className}`}
+      style={
+        images
+          ? { aspectRatio: (images.before.width + images.after.width) / images.before.height }
+          : undefined
+      }
+    >
       <figure className="relative bg-paper">
         {images ? (
           <Image
