@@ -1,15 +1,7 @@
 import { ApplyButton } from "@/components/ApplyButton";
 import { Header } from "@/components/Header";
-import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
-import { CompactCard, FeaturedCard, QuoteCard } from "@/components/ResultCards";
-import {
-  COACH_NAME,
-  compactResults,
-  disclaimer,
-  featuredResults,
-  quotes,
-  story,
-} from "@/lib/content";
+import { FeaturedCard } from "@/components/ResultCards";
+import { COACH_NAME, disclaimer, featuredResults } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -26,7 +18,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section id="results" className="border-b border-mist-200 bg-paper py-24">
+        <section id="results" className="bg-paper py-24">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 max-w-xl">
               <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -36,46 +28,12 @@ export default function Home() {
             </div>
 
             <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
-                {compactResults.map((r) => (
-                  <CompactCard key={r.name} {...r} />
-                ))}
-              </div>
-
               {featuredResults.map((r, i) => (
-                <FeaturedCard key={r.name} {...r} reverse={i % 2 === 1} />
+                <FeaturedCard key={i} {...r} reverse={i % 2 === 1} />
               ))}
-
-              <div className="grid gap-6 md:grid-cols-3">
-                {quotes.map((q) => (
-                  <QuoteCard key={q.name} {...q} />
-                ))}
-              </div>
             </div>
 
             <p className="mt-10 max-w-3xl text-sm leading-relaxed text-mist-500">{disclaimer}</p>
-          </div>
-        </section>
-
-        {/* My story */}
-        <section id="story" className="bg-mist-50 py-24">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-[5fr_6fr] md:gap-16">
-            <PhotoPlaceholder
-              label={`${COACH_NAME}, coach`}
-              tone="blue"
-              className="aspect-[4/5] border border-sky-200"
-            />
-            <div>
-              <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-                My story
-              </h2>
-              <div className="mt-8 space-y-5 text-[17px] leading-relaxed text-ink/80">
-                {story.map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
-              </div>
-              <p className="mt-8 border-t border-mist-200 pt-6 text-sm font-semibold">{COACH_NAME}</p>
-            </div>
           </div>
         </section>
 
