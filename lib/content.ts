@@ -3,6 +3,8 @@ import afterPhoto from "@/assets/testimonial-after.jpg";
 import beforePhoto from "@/assets/testimonial-before.jpg";
 import prepAfter from "@/assets/prep-after.jpg";
 import prepBefore from "@/assets/prep-before.jpg";
+import lb110After from "@/assets/lb110-after.jpg";
+import lb110Before from "@/assets/lb110-before.jpg";
 import mikeAfter from "@/assets/mike-after.jpg";
 import mikeBefore from "@/assets/mike-before.jpg";
 
@@ -68,11 +70,12 @@ export const featuredResults: FeaturedResult[] = [
     ],
   },
   {
-    // TODO: replace with the client's name and add before/after photos (`images`).
+    // TODO: replace with the client's name.
     name: "Anonymous client",
     descriptor: "Started October 1, 2025",
     lost: "110 lbs",
     summary: "Started at 320 lbs on October 1, 2025. Now 210 lbs.",
+    images: { before: lb110Before, after: lb110After },
     quote: [
       "When I started working with Zane on October 1, 2025, I weighed 320 pounds. Today, I’m down to 210 pounds—a total of 110 pounds lost.",
       "I knew I needed to make some major changes in my life, but I honestly didn’t know where to start. Zane gave me the structure, guidance, and accountability I needed to completely turn my health around.",
