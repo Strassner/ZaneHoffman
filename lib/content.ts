@@ -29,8 +29,7 @@ export type FeaturedResult = {
 
 export const featuredResults: FeaturedResult[] = [
   {
-    // TODO: replace with the client's name (and add duration if known).
-    name: "Anonymous client",
+    name: "Jessica Debuhr",
     descriptor: "After bariatric surgery and a revision",
     lost: "150 lbs",
     images: { before: beforePhoto, after: afterPhoto },
@@ -59,8 +58,7 @@ export const featuredResults: FeaturedResult[] = [
     ],
   },
   {
-    // TODO: replace with the client's name.
-    name: "Anonymous client",
+    name: "Brady Bousquet",
     descriptor: "Natural bodybuilder · OCB Natural Pro Card",
     stat: "Under 10% body fat",
     summary: "Contest prep that ended with a Natural Pro Card win.",
@@ -70,8 +68,7 @@ export const featuredResults: FeaturedResult[] = [
     ],
   },
   {
-    // TODO: replace with the client's name.
-    name: "Anonymous client",
+    name: "Edgar Estrada",
     descriptor: "Started October 1, 2025",
     lost: "110 lbs",
     summary: "Started at 320 lbs on October 1, 2025. Now 210 lbs.",
