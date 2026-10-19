@@ -8,8 +8,7 @@ import lb110Before from "@/assets/lb110-before.jpg";
 import mikeAfter from "@/assets/mike-after.jpg";
 import mikeBefore from "@/assets/mike-before.jpg";
 
-// Dummy destination until the real application form exists.
-export const APPLICATION_URL = "#";
+export const APPLICATION_URL = "https://form.jotform.com/262907090332050";
 
 export const COACH_NAME = "Zane Hoffman";
 
